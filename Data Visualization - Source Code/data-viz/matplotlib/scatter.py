@@ -7,7 +7,7 @@ import pickle
 with open('iris.pickle', 'rb') as f:
     iris = pickle.load(f)
 
-# extract the first column from the data table (get all of the rows)
+# extract the first column from the data table
 sepal_length = iris['data'][:, 0]
 sepal_width = iris['data'][:, 1]
 classes = iris['target']

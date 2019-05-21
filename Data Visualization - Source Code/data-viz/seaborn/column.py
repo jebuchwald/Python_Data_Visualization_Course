@@ -11,9 +11,9 @@ with open('fruit-sales.pickle', 'rb') as f:
 # splitting a list of tuples into two lists
 fruit, num_sold = zip(*data)
 fruit = list(fruit)
-num_sold = list(num_sold)
+num_sold =list(num_sold)
 
-# matplotlib: plt.bar(bar_coords, num_sold)
+# replace the x coords with the fruit names
 axes = sns.barplot(x=fruit, y=num_sold)
 axes.set_title('Number of fruit sold (2017)')
 axes.set_ylabel('Number of fruit (millions)')

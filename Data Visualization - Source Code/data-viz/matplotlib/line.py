@@ -10,13 +10,13 @@ with open('prog-langs-popularity.pickle', 'rb') as f:
 # split into two lists
 languages, rankings = zip(*data)
 
-# get the Java years and ranks (split Java data into two lists)
+# get the Java years and ranks Isplit Java data into two lists)
 java_years, java_ranks = zip(*rankings[0])
 
 plt.plot(java_years, java_ranks)
 plt.xticks(java_years)
-# x-axis: year, y-axis: ranking, title: Java Ranking
+# x-axis: year, y-axis: ranking, title: Java rankings
 plt.xlabel('year')
 plt.ylabel('ranking')
-plt.title('Java Ranking')
+plt.title('Java Rankings')
 plt.show()

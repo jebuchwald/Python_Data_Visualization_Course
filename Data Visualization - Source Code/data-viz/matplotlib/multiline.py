@@ -3,7 +3,7 @@
 import matplotlib.pyplot as plt
 import pickle
 
-# load data
+#load data
 with open('prog-langs-popularity.pickle', 'rb') as f:
     data = pickle.load(f)
 
@@ -15,10 +15,8 @@ for i in range(len(languages)):
     # for each language, split their data into years and rankings lists
     years, ranks = zip(*rankings[i])
     plt.plot(years, ranks)
-
-# x-axis=year, y-axis=ranking, title=Rankings of Programming Languages
 plt.xlabel('year')
 plt.ylabel('ranking')
-plt.title('Rankings of Programming Languages')
+plt.title('Rankings of Programming Languages Over Time')
 plt.legend(languages)
 plt.show()

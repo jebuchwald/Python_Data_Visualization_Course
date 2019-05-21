@@ -7,12 +7,12 @@ import pickle
 with open('devs-outside-time.pickle', 'rb') as f:
     data = pickle.load(f)
 
-# split into two lists
+#split into two lists
 time, responses = zip(*data)
 
 plt.pie(responses, labels=time, autopct='%d%%')
-# force the x/y axes to have the same scale
-# circle instead of an ellipse
+# force the x/y axes to be equal
+# makes it a circle
 plt.axis('equal')
 plt.title('Daily Time Developers Spend Outside')
 plt.show()
