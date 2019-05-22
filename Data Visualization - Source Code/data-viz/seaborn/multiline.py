@@ -11,15 +11,14 @@ with open('prog-langs-popularity.pickle', 'rb') as f:
 # split into two lists
 languages, rankings = zip(*data)
 
-# iterate over all of the language and call "plot" on their data
+# iterate over all of the language and call "plot on their data"
 for i in range(len(languages)):
-    # for each language, split their data into years and rankings lists
+    # for each language, split their data into years and rankins lists
     years, ranks = zip(*rankings[i])
-    # matplotlib: plt.plot(years, ranks)
     sns.lineplot(years, ranks)
 
 plt.xlabel('year')
 plt.ylabel('ranking')
-plt.title('Rankings of Programming Languages')
+plt.title('Rankings of Programming Languages Over Time')
 plt.legend(languages)
 plt.show()

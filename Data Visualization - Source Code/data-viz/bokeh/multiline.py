@@ -12,14 +12,13 @@ with open('prog-langs-popularity.pickle', 'rb') as f:
 
 languages, rankings = zip(*data)
 
-fig = figure(x_axis_label='year', y_axis_label='rank', title='Rankings of Programming Languages')
+fig = figure(x_axis_label='year', y_axis_label='rank', title="Rankings of Programming Languages by Year")
 
 for i in range(len(languages)):
     years, ranks = zip(*rankings[i])
-    # legend & color for this particular line
+    # legend and color for this particular line
     fig.line(years, ranks, line_width=2, legend=languages[i], color=palette[i])
 
 # interactive legend:
 fig.legend.click_policy = 'hide'
-
 show(fig)

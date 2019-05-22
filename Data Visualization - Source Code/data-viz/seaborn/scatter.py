@@ -17,5 +17,5 @@ classes = iris['target']
 sns.scatterplot(sepal_length, sepal_width, hue=classes, legend=False)
 plt.xlabel('Sepal length (cm)')
 plt.ylabel('Sepal width (cm)')
-plt.title('Iris data: sepal length v. width')
+plt.title('Iris data: sepal lenth v. width')
 plt.show()

@@ -13,7 +13,7 @@ sepal_length = iris['data'][:, 0]
 sepal_width = iris['data'][:, 1]
 classes = iris['target']
 
-# scatter, reg, kde, hex
-axes = sns.jointplot(sepal_length, sepal_width, kind='hex')
+# kind = [scatter, reg, kde, hex]
+axes = sns.jointplot(sepal_length, sepal_width, kind='kde')
 axes.set_axis_labels('Sepal length (cm)', 'Sepal width (cm)')
 plt.show()

@@ -40,10 +40,9 @@ fig1.circle(versicolor_sepal_length, versicolor_sepal_width, color=palette[1], l
 fig1.circle(virginica_sepal_length, virginica_sepal_width, color=palette[2], legend='virginica')
 
 # sepal length v. petal length
-fig2 = figure(x_axis_label='Sepal length (cm)', y_axis_label='Petal length (cm)', x_range=fig1.x_range)
+fig2 = figure(x_axis_label='Sepal length (cm)', y_axis_label='Petal length (cm)', x_range=fig1.x_range, y_range=fig1.y_range)
 fig2.circle(setosa_sepal_length, setosa_petal_length, color=palette[0], legend='setosa')
 fig2.circle(versicolor_sepal_length, versicolor_petal_length, color=palette[1], legend='versicolor')
 fig2.circle(virginica_sepal_length, virginica_petal_length, color=palette[2], legend='virginica')
 
 show(column(fig1, fig2))
-

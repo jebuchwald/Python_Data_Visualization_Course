@@ -13,11 +13,9 @@ dev_types, years_exp = zip(*data)
 dev_types = list(dev_types)
 years_exp = list(years_exp)
 
-bar_coords = range(len(dev_types))
-
-plt.barh(bar_coords, years_exp)
+# matplotlib: plt.barh(bar_coords, years_exp)
+sns.barplot(y=dev_types, x=years_exp)
 plt.xlabel('years')
 plt.title("Years of Coding Experience by Developer Type")
-plt.yticks(bar_coords, dev_types, fontsize=8)
 plt.tight_layout()
 plt.show()
