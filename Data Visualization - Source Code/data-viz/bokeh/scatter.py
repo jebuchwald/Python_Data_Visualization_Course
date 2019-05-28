@@ -25,6 +25,7 @@ virginica_sepal_length = sepal_length[classes == 2]
 virginica_sepal_width = sepal_width[classes == 2]
 
 fig = figure(x_axis_label='Sepal length (cm)', y_axis_label='Sepal width (cm)')
+# plot setosa sepal length v. width
 fig.circle(setosa_sepal_length, setosa_sepal_width, color=palette[0], legend='Setosa')
 # plot versicolor sepal length v. width
 fig.circle(versicolor_sepal_length, versicolor_sepal_width, color=palette[1], legend='Versicolor')
